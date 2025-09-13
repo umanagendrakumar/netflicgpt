@@ -9,7 +9,6 @@ import { TbCloudSearch } from "react-icons/tb";
 import { IoHome } from "react-icons/io5";
 import { reset, toggleSearchPage } from "../utils/store/preferenceSlice";
 import LangDropdown from "./LangDropdown";
-import lang from "../utils/langConstants";
 import { MdOutlineFollowTheSigns } from "react-icons/md";
 
 const Header = () => {
@@ -18,6 +17,7 @@ const Header = () => {
   const user = useSelector((store) => store.user);
   const isSearchPage = useSelector((store) => store.preferences.isSearchPage);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -44,8 +44,6 @@ const Header = () => {
   const togglePage = () => {
     dispatch(toggleSearchPage());
   }
-
-  const code = useSelector((store) => store.preferences.lang);
 
   return (
     <header className='absolute z-10 w-full flex justify-between items-center'>
