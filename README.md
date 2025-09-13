@@ -1,4 +1,4 @@
-# NetflicAI Project
+<!-- # NetflicAI Project
 
 ![React](https://img.shields.io/badge/React-17.0.2-blue)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth-yellow)
@@ -102,4 +102,4 @@ Authentication
 
 17. also update display name from "" to name that we enter during signUp.
 18. for that update user profile by adding display name during signUp using updateProfile() api given by firebase.
-19. also add to store. 
+19. also add to store.  -->
