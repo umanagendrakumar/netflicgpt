@@ -27,12 +27,12 @@ const GeminiSearchBar = ({ code }) => {
   };
 
   const handleGeminiSearch = async () => {
-    if (query.current.value != "") {
+    if (query.current.value !== "") {
       dispatch(toggleSearchShimmer());
     }
 
     const prompt = "Act as an intelligent movie recommendation system with deep knowledge of cinema; for the query" + query.current.value + ", suggest the 5 most relevant and high-quality movies only as names, comma-separated with no extra text (e.g., RRR, Magadheera, Coolie, Jawaan, Premalu).";
-    if (query.current.value != "") {
+    if (query.current.value !== "") {
       try {
         const response = await ai.models.generateContent({
           model: 'gemini-2.0-flash-001',
